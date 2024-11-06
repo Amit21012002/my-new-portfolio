@@ -21,7 +21,7 @@ rgbeLoader.load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/small_empt
 });
 
 const loader = new GLTFLoader();
-loader.load( './3d_clipart_webdev.glb', function ( gltf ) {
+loader.load( '3d_clipart_webdev.glb', function ( gltf ) {
     const webdev  = gltf.scene ;
     
     webdev.position.set(15, -33, -5); // Raise model by 1 unit
@@ -30,7 +30,7 @@ loader.load( './3d_clipart_webdev.glb', function ( gltf ) {
         scene.add( webdev );
     
     },
-loader.load( './table_chairs.glb', function ( gltf ) {
+loader.load( 'table_chairs.glb', function ( gltf ) {
 const model  = gltf.scene ;
 
 model.position.set(20,-100, 0); // Raise model by 1 unit
