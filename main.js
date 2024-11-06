@@ -21,24 +21,20 @@ rgbeLoader.load('https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/small_empt
 });
 
 const loader = new GLTFLoader();
-loader.load( '/3d_clipart_webdev.glb', function ( gltf ) {
-    const webdev  = gltf.scene ;
-    
-    webdev.position.set(15, -33, -5); // Raise model by 1 unit
-    webdev.scale.set(3.5, 3.5, 3.5); // Scale up by 1.5
-    
-        scene.add( webdev );
-    
-    },
-loader.load( '/table_chairs.glb', function ( gltf ) {
-const model  = gltf.scene ;
+loader.load('/3d_clipart_webdev.glb', function (gltf) {
+    const webdev = gltf.scene;
+    webdev.position.set(15, -33, -5);
+    webdev.scale.set(3.5, 3.5, 3.5);
+    scene.add(webdev);
+});
 
-model.position.set(20,-100, 0); // Raise model by 1 unit
-model.scale.set(1, 1, 1); 
-
-	scene.add( model );
-
-}));
+// Load the second model
+loader.load('/table_chairs.glb', function (gltf) {
+    const model = gltf.scene;
+    model.position.set(20, -100, 0);
+    model.scale.set(1, 1, 1);
+    scene.add(model);
+});
 
 
 const controls = new OrbitControls(camera, renderer.domElement);
